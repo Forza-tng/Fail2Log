@@ -1,0 +1,22 @@
+{
+	"name": "Fail2Log",
+	"author": [
+		"Ozan Salih",
+		"Forza"
+	],
+	"url": "https://github.com/greenhatmonkey/Fail2Log",
+	"description": "Logs failed login attempts (IP and username) for use with tools like Fail2Ban.",
+	"version": "0.1.0",
+	"license-name": "CC0-1.0",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.35"
+	},
+	"AutoloadClasses": {
+		"Fail2LogClass": "includes/Fail2Log.php"
+	},
+	"Hooks": {
+		"AuthManagerLoginAuthenticateAudit": "Fail2LogClass::onAuthManagerLoginAuthenticateAudit"
+	},
+	"manifest_version": 2
+}
